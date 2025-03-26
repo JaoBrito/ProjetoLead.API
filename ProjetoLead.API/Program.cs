@@ -14,6 +14,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>( options =>
     options.UseSqlite( builder.Configuration.GetConnectionString( "DefaultConnection" ) ) );
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy( "PermitirTudo", builder =>
+     {
+         builder.AllowAnyOrigin()
+             .AllowAnyMethod()
+             .AllowAnyHeader();
+     } );
+} );
 
 var app = builder.Build();
 
@@ -26,6 +35,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors( "PermitirTudo" );
 app.UseAuthorization();
 
 app.MapControllers();

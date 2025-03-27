@@ -16,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>( options =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy( "PermitirTudo", builder =>
+    options.AddPolicy( "AllowAll", builder =>
      {
          builder.AllowAnyOrigin()
              .AllowAnyMethod()
@@ -35,7 +35,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors( "PermitirTudo" );
+app.UseCors( "AllowAll" );
 app.UseAuthorization();
 
 app.MapControllers();

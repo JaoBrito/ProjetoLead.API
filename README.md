@@ -7,11 +7,11 @@ A API foi criada para gerenciar operações de CRUD com o banco de dados SQLite.
 ## Clonando o Repositório
 Clone este repositório para a sua máquina local:
 
-`git clone https://github.com/seuusuario/seurepositorio.git`
+`git clone https://github.com/JaoBrito/ProjetoLead.API.git`
 
 Entre no diretório do projeto:
 
-`cd seurepositorio`
+`cd .\ProjetoLead.API\`
 
 ## Configuração do Banco de Dados
 Este projeto usa o SQLite como banco de dados. O Entity Framework Core foi configurado para utilizar um banco em memória ou um arquivo SQLite.

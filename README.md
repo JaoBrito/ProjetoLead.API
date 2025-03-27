@@ -33,7 +33,7 @@ Certifique-se de que a string de conexão no arquivo appsettings.json está conf
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=database.db"
+    "DefaultConnection": "Data Source=MeuBanco.db"
   }
 }
 ```
